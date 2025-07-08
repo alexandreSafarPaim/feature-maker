@@ -12,7 +12,7 @@ class FeatureMakerServiceProvider extends ServiceProvider
             $this->loadFeatureMigrations();
 
             $this->commands([
-                \Alexandresafarpaim\FeatureMaker\Commands\MakeFeatureCommand::class
+                \Alexandresafarpaim\FeatureMaker\Commands\MakeFeatureCommand::class 
             ]);
         }
     }
