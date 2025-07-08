@@ -1,0 +1,26 @@
+{
+  "name": "alexandresafarpaim/feature-maker",
+  "description": "Gera uma feature completa com estrutura Laravel personalizada",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "FeatureMaker\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Alexandresafarpaim\\FeatureMaker\\FeatureMakerServiceProvider"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Alexandre Paim",
+      "email": "alexandresafarpaim@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

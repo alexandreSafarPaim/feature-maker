@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Features\{{ name }}\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Builder;
+
+class {{ name }} extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        // 'name', 'description'
+    ];
+
+    protected $casts = [
+        // 'active' => 'boolean',
+    ];
+
+    public function scopeFilter(Builder $query, array $filters): Builder
+    {
+        if (!empty($filters['search'])) {
+            $query->where('name', 'like', "%{$filters['search']}%");
+        }
+
+        return $query;
+    }
+}

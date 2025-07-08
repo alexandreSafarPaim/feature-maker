@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Features\{{ name }}\Controllers;
+
+use App\Features\{{ name }}\Models\{{ name }};
+use App\Features\{{ name }}\Requests\Store{{ name }}Request;
+use App\Features\{{ name }}\Requests\Update{{ name }}Request;
+use App\Features\{{ name }}\Resources\{{ name }}Resource;
+use App\Features\{{ name }}\Resources\{{ name }}Collection;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class {{ name }}Controller extends Controller
+{
+    public function index(Request $request)
+    {
+        $data = {{ name }}::query()
+            ->filter($request->all())
+            ->paginate(15);
+
+        return new {{ name }}Collection($data);
+    }
+
+    public function store(Store{{ name }}Request $request)
+    {
+        return new {{ name }}Resource({{ name }}::create($request->validated()));
+    }
+
+    public function show({{ name }} ${{ name_lower }})
+    {
+        return new {{ name }}Resource(${{ name_lower }});
+    }
+
+    public function update(Update{{ name }}Request $request, {{ name }} ${{ name_lower }})
+    {
+        ${{ name_lower }}->update($request->validated());
+        return new {{ name }}Resource(${{ name_lower }});
+    }
+
+    public function destroy({{ name }} ${{ name_lower }})
+    {
+        ${{ name_lower }}->delete();
+        return response()->noContent();
+    }
+}
