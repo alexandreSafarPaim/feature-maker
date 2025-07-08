@@ -25,17 +25,6 @@
 
 ## Instalação 🚀
 
-Adicione no seu `composer.json`:
-
-```json
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "https://github.com/suaempresa/laravel-feature-maker"
-  }
-]
-```
-
 Instale com:
 
 ```bash
