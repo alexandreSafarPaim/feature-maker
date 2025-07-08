@@ -1,6 +1,6 @@
 <?php
 
-namespace FeatureMaker;
+namespace Alexandresafarpaim\FeatureMaker;
 
 use Illuminate\Support\ServiceProvider;
 
