@@ -6,7 +6,6 @@ use App\Features\{{ name }}\Models\{{ name }};
 use App\Features\{{ name }}\Requests\Store{{ name }}Request;
 use App\Features\{{ name }}\Requests\Update{{ name }}Request;
 use App\Features\{{ name }}\Resources\{{ name }}Resource;
-use App\Features\{{ name }}\Resources\{{ name }}Collection;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -18,7 +17,7 @@ class {{ name }}Controller extends Controller
             ->filter($request->all())
             ->paginate(15);
 
-        return new {{ name }}Collection($data);
+        return {{ name }}Resource::collection($data);
     }
 
     public function store(Store{{ name }}Request $request)

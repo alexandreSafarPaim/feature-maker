@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class MakeFeatureCommand extends Command
 {
-    protected $signature = 'make:feature {name}';
+    protected $signature = 'make:feature {name} {--m|migration} {--c|controller}';
     protected $description = 'Gera uma feature completa com base nos stubs';
 
     public function handle(): void
@@ -21,6 +21,7 @@ class MakeFeatureCommand extends Command
             return;
         }
 
+        // Criar todas as pastas, mesmo que vazias
         File::makeDirectory($basePath . '/Controllers', 0755, true);
         File::makeDirectory($basePath . '/Models', 0755, true);
         File::makeDirectory($basePath . '/Requests', 0755, true);
@@ -30,14 +31,18 @@ class MakeFeatureCommand extends Command
         $tableName = Str::snake(Str::pluralStudly($name));
 
         $this->generateFromStub('model', "$basePath/Models/{$name}.php", $name, $tableName);
-        $this->generateFromStub('controller', "$basePath/Controllers/{$name}Controller.php", $name, $tableName);
-        $this->generateFromStub('store-request', "$basePath/Requests/Store{$name}Request.php", $name, $tableName);
-        $this->generateFromStub('update-request', "$basePath/Requests/Update{$name}Request.php", $name, $tableName);
-        $this->generateFromStub('resource', "$basePath/Resources/{$name}Resource.php", $name, $tableName);
-        $this->generateFromStub('collection', "$basePath/Resources/{$name}Collection.php", $name, $tableName);
 
-        $migrationFile = date('Y_m_d_His') . '_create_' . $tableName + '_table.php';
-        $this->generateFromStub('migration', "$basePath/Migrations/{$migrationFile}", $name, $tableName);
+        if ($this->option('controller')) {
+            $this->generateFromStub('controller', "$basePath/Controllers/{$name}Controller.php", $name, $tableName);
+            $this->generateFromStub('store-request', "$basePath/Requests/Store{$name}Request.php", $name, $tableName);
+            $this->generateFromStub('update-request', "$basePath/Requests/Update{$name}Request.php", $name, $tableName);
+            $this->generateFromStub('resource', "$basePath/Resources/{$name}Resource.php", $name, $tableName);
+        }
+
+        if ($this->option('migration')) {
+            $migrationFile = date('Y_m_d_His') . '_create_' . $tableName . '_table.php';
+            $this->generateFromStub('migration', "$basePath/Migrations/{$migrationFile}", $name, $tableName);
+        }
 
         $this->info("Feature '{$name}' criada com sucesso!");
     }
