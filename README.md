@@ -14,7 +14,7 @@
 ## Sumário 📚
 
 - [Instalação 🚀](#instalação-)
-- [Como Funciona ⚙️](#como-funciona-)
+- [Como Funciona](#como-funciona)
 - [Uso do Comando 🧪](#uso-do-comando-)
 - [Padrões Gerados ✨](#padrões-gerados-)
 - [Personalização 🧰](#personalização-)
@@ -35,7 +35,7 @@ composer require suaempresa/feature-maker
 
 ---
 
-## Como Funciona ⚙️
+## Como Funciona
 
 O comando `php artisan make:feature` gera a estrutura completa de uma feature, baseada em stubs personalizados.
 
