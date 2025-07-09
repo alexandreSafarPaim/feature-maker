@@ -13,17 +13,17 @@
 
 ## Sumário 📚
 
-- [Instalação 🚀](#instalação-)
+- [Instalação](#instalação)
 - [Como Funciona](#como-funciona)
-- [Uso do Comando 🧪](#uso-do-comando-)
-- [Padrões Gerados ✨](#padrões-gerados-)
-- [Personalização 🧰](#personalização-)
-- [Boas Práticas ✅](#boas-práticas-)
-- [Licença 📄](#licença-)
+- [Uso do Comando](#uso-do-comando)
+- [Padrões Gerados](#padrões-gerados)
+- [Personalização](#personalização)
+- [Boas Práticas](#boas-práticas)
+- [Licença](#licença)
 
 ---
 
-## Instalação 🚀
+## Instalação
 
 Instale com:
 
@@ -53,7 +53,7 @@ Arquivos são criados com base nas opções que você passa ao comando.
 
 ---
 
-## Uso do Comando 🧪
+## Uso do Comando
 
 ```bash
 php artisan make:feature NomeDaFeature [--controller|-c] [--migration|-m]
@@ -80,7 +80,7 @@ php artisan make:feature IntegracaoPagarme
 
 ---
 
-## Padrões Gerados ✨
+## Padrões Gerados
 
 - **Model** com:
   - `fillable`, `casts`, `HasFactory`
@@ -102,7 +102,7 @@ php artisan make:feature IntegracaoPagarme
 
 ---
 
-## Personalização 🧰
+## Personalização
 
 Você pode editar os stubs em:
 ```
@@ -112,7 +112,7 @@ Para adaptar os arquivos gerados ao seu padrão de projeto (adicionar soft delet
 
 ---
 
-## Boas Práticas ✅
+## Boas Práticas
 
 - Modularização por feature (inspirado em DDD-lite)
 - Reutilização via copy/paste facilitada
@@ -121,7 +121,7 @@ Para adaptar os arquivos gerados ao seu padrão de projeto (adicionar soft delet
 
 ---
 
-## Licença 📄
+## Licença
 
 MIT — Livre para uso comercial e pessoal. Mantenha os créditos ;)
 
