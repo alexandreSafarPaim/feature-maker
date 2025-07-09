@@ -3,7 +3,6 @@
 # Laravel Feature Maker
 
 [![Laravel][laravel-badge]][laravel-url]
-[![License: MIT][license-badge]][license-url]
 
 </div>
 
