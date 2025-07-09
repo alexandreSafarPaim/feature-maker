@@ -13,13 +13,13 @@
 
 ## Sumário 📚
 
-- [Instalação 🚀](#instalação-🚀)
-- [Como Funciona ⚙️](#como-funciona-⚙️)
-- [Uso do Comando 🧪](#uso-do-comando-🧪)
-- [Padrões Gerados ✨](#padrões-gerados-✨)
-- [Personalização 🧰](#personalização-🧰)
-- [Boas Práticas ✅](#boas-práticas-✅)
-- [Licença 📄](#licença-📄)
+- [Instalação](#instalação)
+- [Como Funciona ⚙️](#como-funciona)
+- [Uso do Comando 🧪](#uso-do-comando)
+- [Padrões Gerados ✨](#padrões-gerados)
+- [Personalização 🧰](#personalização)
+- [Boas Práticas ✅](#boas-práticas)
+- [Licença 📄](#licença)
 
 ---
 
