@@ -27,7 +27,7 @@
 Instale com:
 
 ```bash
-composer require suaempresa/feature-maker
+composer require alexandresafarpaim/feature-maker
 ```
 
 > 💡 Recomendamos **não instalar como `--dev`** para garantir que as migrations customizadas sejam carregadas corretamente em produção.
@@ -128,5 +128,5 @@ MIT — Livre para uso comercial e pessoal. Mantenha os créditos ;)
 
 [laravel-badge]: https://img.shields.io/badge/Laravel-Framework-red
 [laravel-url]: https://laravel.com
-[license-badge]: https://img.shields.io/github/license/suaempresa/laravel-feature-maker
-[license-url]: https://github.com/suaempresa/laravel-feature-maker/blob/main/LICENSE
+[license-badge]: https://img.shields.io/github/license/alexandresafarpaim/laravel-feature-maker
+[license-url]: https://github.com/alexandresafarpaim/laravel-feature-maker/blob/main/LICENSE
